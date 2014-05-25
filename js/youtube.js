@@ -121,7 +121,7 @@ function fnShareMyLink(){
 	var lstLoop = $('#lstLoop').val();
 	var text_loop = parseInt(text_loop);
 
-	var htmlStr = '/show-video.html'; // change your domain name here
+	var htmlStr = 'http://techtipsforall.github.io/embedpartofyoutube/html/showVideo.html'; // change your domain name here
 	htmlStr = htmlStr + '?st=' + text_start; //Start Time
 	htmlStr = htmlStr + '&et=' + text_end; //End Time
 	htmlStr = htmlStr + '&vId=' + vId;// Video Id
