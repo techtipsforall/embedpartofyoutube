@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<link href="css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+		<script type="text/javascript" src='js/jquery-1.11.0.min.js'></script>
+		<script type="text/javascript" src='js/youtube.js'></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+		<style type="text/css">
+			.container{
+				background-color: #E8E8E8;
+				width:650;
+				padding: 10px;
+			}
+			.divVideoContainer{
+				width:640px;
+				height:450px;
+				position: relative;
+			}
+			.divOptions{
+				width:640px;
+			}
+			.optionChild{
+				width:100%;
+				margin:5px;
+			}
+			.btn{
+			    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+			    border: 0 none;
+			    border-radius: 2px;
+			    color: #FFFFFF;
+			    cursor: pointer;
+			    font-size: 13px;
+			    height: 26px;
+			    margin: 0 0 0 8px;
+			    min-width: 60px;
+			    width: auto;
+			    z-index: 0;
+			}
+			.input{
+				border: 1px inset;
+			    font-size: 13px;
+			    height: 25px;
+			}
+			.divShareMyLink{
+				display: none;
+				padding: 5px;
+			}
+			.w3{
+				width:300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='container'>
+			Youtube video URL : 
+			<input type='text' class='input w3' name='text_url' id='text_url' value="" />
+			
+			<div class='divOptions'>
+				<div class='optionChild'>
+					At what playback time you want your video to start?<br/>
+					(Value should be in seconds, for eg: 2 minutes = 120)
+					<input type='text' class='input' name='text_start' id='text_start' value='' style='float:right' />
+				</div>
+				<div class='optionChild'>
+					At what playback time you want your video to stop?<br/>
+					(Value should be in seconds, for eg: 3 minutes = 180)
+					<input type='text' class='input' name='text_end' id='text_end' value='' style='float:right' />
+				</div>
+				<div class='optionChild'>
+					Do you want to autoplay video:
+					<select id='lstAutoplay'>
+						<option value='yes'>Yes</option>
+						<option value='no'>No</option>						
+					</select>
+				</div>
+				<div class='optionChild'>
+					Do you want to Loop video :
+					<select id='lstLoop'>
+						<option value='yes'>Yes</option>
+						<option value='no'>No</option>
+					</select>
+				</div>
+				<div class='optionChild'>
+					Loop Time:
+					<input type='text' class='input' name='text_loop' id='text_loop' value='10' />
+				</div>
+
+				<div class='optionChild'>
+					<input type='button' class='btn' name='btn_search' id='btn_search' value='Go' onclick='fnSearchVideo()'/>
+					<input type='button' class='btn' name='btn' value='Make My Share Link' onclick='fnShareMyLink()' />				
+				</div>
+				<div id='divShareMyLink' class='divShareMyLink'>
+
+				</div>
+			</div>
+
+			<div id='divVideoContainer' class='divVideoContainer' style='display:none;'>
+				<div id='showPreview' style='display:none;'>
+					
+				</div>
+				<div id='slideBar' class='vRangeSelector' style='width:640px;display:none;'>
+				</div>
+	            <div id='rangeOutputStart' class='vRangeSelector' style='float:left;display:none;margin-top:5px;'>Start: </div>
+	            <div id='rangeOutputEnd' class='vRangeSelector' style='float:right;display:none;margin-top:5px;'>End: </div>
+	            <div id='rangeStart' class='vRangeSelector' style='display:none;width:2px;height:70px;position:absolute;bottom:40px;left:0px;background-color:#999;'>&nbsp;</div>
+	            <div id='rangeEnd' class='vRangeSelector' style='display:none;width:2px;height:70px;position:absolute;bottom:40px;right:0px;background-color:#999;'>&nbsp;</div>
+			</div>
+		</div>
+	</body>
+
+</html>
