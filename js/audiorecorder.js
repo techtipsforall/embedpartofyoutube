@@ -1,6 +1,6 @@
 (function(window){
  
-  var WORKER_PATH = 'https://raw.github.com/mattdiamond/Recorderjs/master/recorderWorker.js';
+  var WORKER_PATH = 'https://raw.githubusercontent.com/techtipsforall/embedpartofyoutube/gh-pages/js/recorderworker.js';
  
   var Recorder = function(source, cfg){
     var config = cfg || {};
